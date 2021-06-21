@@ -1,6 +1,7 @@
 var hourEl = true;
 console.log(hourEl);
-var timeBlock = $("#timeBlock");
+
+
 
 // Set currentDayEl to display currentDay in the header
 var currentDayEl = moment();
@@ -11,7 +12,7 @@ console.log(currentDayEl);
 //What hour of the day it is
 var currentHourEl = moment();
 $("#currentHour").text(currentHourEl.format("hh:" + "mm" + "a"));
-console.log(currentHour);
+console.log(currentHourEl);
 
 //Is it AM or PM
 var dayTime = moment().format("kk");
@@ -33,82 +34,63 @@ var secondsForNextHour = minutesForNextHour * 60 * 1000;
 console.log(secondsForNextHour);
 
 
-// Color block 
-
-function changeColors () {
-
-        //minutesForNextHour = minutesForNextHour * 60 * 1000;
-        currentHour = true;
-        console.log(minutesForNextHour); {
-        $(".description").foreach(function() {
-            if((parseInt($(this).attr(".description")) ) <= currentHourEl) {
-                $(this).addClass("past");
-            };
-            if((parseInt($(this).attr(".description")) ) === currentHourEl) {
-                $(this).addClass("present");
-            };
-            if((parseInt($(this).attr(".description")) ) >= currentHourEl) {
-                $(this).addClass("future");
-            };
-        });
-        
+function changeColor() {
+    var currentHourEl = currentDayEl.hours();
+    var timeBlock = $(".time-block");
+    for (var i = 0; i < timeBlock.length; i++) {
+        var group = timeBlock[i];
+        if (parseInt(group.id.split("-")[0]) < currentHourEl) {
+            $(group).addClass("past");
+        }
+        else if (parseInt(group.id.split("-")[0]) === currentHourEl) {
+            $(group).removeClass("past");
+            $(group).addClass("present");
+        }
+        else {
+            $(group).removeClass("past");
+            $(group).removeClass("present");
+            $(group).addClass("future");
+        }
     }
 }
-//     // Check time to update colors eve ry hour.
 
-//     // setTimeout(changeColors, minutesForNextHour);
-//     $(".saveBtn").on('click', function(event) {
-//         event.preventDefault();
-//         var textVal = $(this).prev().children("textarea").val();
-//         var textTime = $(this).prev().attr("description");
-//         for (var i = 0;i < apptsArr.length; i++){
-//             if (apptsArr[i].time === textTime){
-//                 apptsArr[i].msg = textVal;
-//             }
-//         }
-//         localStorage.setItem('Appointments', JSON.stringify(apptsArr));
-//         renderMsg();
-//     })
 
-//     var saveDescription = function() {
-//         localStorage.setItem("events", JSON.stringify(savedDescription));
-//       };
-    
 
-// //}
+// //Save data in the local storage
+
+// localStorage.setItem("Activities" JSON.stringify(apptsArr));
+// renderMsg();
+
+
+// var saveDescription = function () {
+//     localStorage.setItem("activities", JSON.stringify(savedDescription));
+// };
+
+
+// //Load saved activities from local storage
+// loadSavedActivities();
+//}
 
 
 // //Click timeblock to enter an event
 
 // //Save button for timeblock
 
-// //Save data in the local storage
+
 
 // //Saved event stays on page
 
-    
 
 
 
-// var currentDayEl = moment();
-// $("#currentDay").text(currentDayEl.format("dddd, MMMM Do"));
-// console.log(currentDayEl);
+
 
 // var currentHour;
 
 // hourUpdate();
 
-// //Load saved activities from local storage
-// loadSavedActivities();
 
-// //Update time Interval
 
-// var updateTime = setInterval(hourUpdate, 1000);
 
-// function hourUpdate() {
-//     var currentHour = moment();
-//     $("#currentHour").text(currentHourEl.format("hh:" + "mm" + "a"));
-//     console.log(currentHour);
-//     timeBlock();
 
-// }
+changeColor();
