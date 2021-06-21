@@ -26,20 +26,13 @@ console.log(pmEl);
 var minutesH = moment().format('m');
 console.log(minutesH);
 
-
-// var minutesForNextHour = 60 - minutesH;
-// console.log(minutesForNextHour)
-
-// var secondsForNextHour = minutesForNextHour * 60 * 1000;
-// console.log(secondsForNextHour);
-
 //Update time
 
-function updatecurrentHour() {
-    setInterval(changeColor, 1000 * 60 * 60);
+// function updatecurrentHour() {
+//     setInterval(changeColor, 1000 * 60 * 60);
 
-    changeColor();
-}
+//     changeColor();
+// }
 
 function changeColor() {
     var currentHourEl = currentDayEl.hours();
@@ -67,6 +60,22 @@ function changeColor() {
 // all numbers have to be military numbers
 //greater than 12 to military time
 //get correct comparison 
+
+
+
+//Save button for timeblock
+
+$(".saveBtn").on("click", function (e) {
+    e.preventDefault();
+
+    var value = $(this).siblings(".description").val();
+console.log(value, "VALUE");
+    var time = $(this).parent().attr("id");
+    console.log(time, "TIME");
+    localStorage.setItem(time, value);
+
+   
+})
 
 
 
