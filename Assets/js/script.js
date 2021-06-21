@@ -1,7 +1,7 @@
-var hourEl = true;
+var hourEl;
 console.log(hourEl);
 
-var timeBlock = $(".time-block");
+
 
 // Set currentDayEl to display currentDay in the header
 var currentDayEl = moment();
@@ -33,14 +33,22 @@ console.log(minutesH);
 // var secondsForNextHour = minutesForNextHour * 60 * 1000;
 // console.log(secondsForNextHour);
 
+//Update time
+
+function updatecurrentHour() {
+    setInterval(changeColor, 1000 * 60 * 60);
+
+    changeColor();
+}
 
 function changeColor() {
     var currentHourEl = currentDayEl.hours();
     var timeBlock = $(".time-block");
-
     for (var i = 0; i < timeBlock.length; i++) {
         var group = timeBlock[i];
+        console.log(group)
         if (parseInt(group.id.split("-")[0]) < currentHourEl) {
+
             $(group).addClass("past");
         }
         else if (parseInt(group.id.split("-")[0]) === currentHourEl) {
@@ -52,65 +60,15 @@ function changeColor() {
             $(group).removeClass("present");
             $(group).addClass("future");
         }
-
-        renderActivity();
-
-        saveButton();
     };
 
-
-
-
-    // //Save data in the local storage
-
-//     localStorage.setItem("savedActivities", JSON.stringify(savedActivities));
-//     renderMessage();
-// };
-
-// var saveDescription() {
-    
-// });
-// }
-
-$(".saveBtn").on("click", saveButton);
-
-localStorage.setItem("savedActivity", JSON.stringify(savedActivity));
-renderMessage();
-
-};
-
-function renderActivity() {
-
-    var lastActivity= JSON.parse(localStorage.getItem("savedActivities"));
-    if (lastActivity !== null) {
-    localStorage.setItem("#activities", JSON.stringify(savedDescription));
-  }
 }
-//Load saved activities from local storage
 
-
-
-
-// //Click timeblock to enter an event
-
-// //Save button for timeblock
-
-
-
-// //Saved event stays on page
-
-
-
-
-
-
-// var currentHour;
-
-// hourUpdate();
-
+// all numbers have to be military numbers
+//greater than 12 to military time
+//get correct comparison 
 
 
 
 
 changeColor();
-
