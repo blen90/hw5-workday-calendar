@@ -1,7 +1,7 @@
 var hourEl = true;
 console.log(hourEl);
 
-
+var timeBlock = $(".time-block");
 
 // Set currentDayEl to display currentDay in the header
 var currentDayEl = moment();
@@ -27,16 +27,17 @@ var minutesH = moment().format('m');
 console.log(minutesH);
 
 
-var minutesForNextHour = 60 - minutesH;
-console.log(minutesForNextHour)
+// var minutesForNextHour = 60 - minutesH;
+// console.log(minutesForNextHour)
 
-var secondsForNextHour = minutesForNextHour * 60 * 1000;
-console.log(secondsForNextHour);
+// var secondsForNextHour = minutesForNextHour * 60 * 1000;
+// console.log(secondsForNextHour);
 
 
 function changeColor() {
     var currentHourEl = currentDayEl.hours();
     var timeBlock = $(".time-block");
+
     for (var i = 0; i < timeBlock.length; i++) {
         var group = timeBlock[i];
         if (parseInt(group.id.split("-")[0]) < currentHourEl) {
@@ -51,25 +52,43 @@ function changeColor() {
             $(group).removeClass("present");
             $(group).addClass("future");
         }
-    }
-}
+
+        renderActivity();
+
+        saveButton();
+    };
 
 
 
-// //Save data in the local storage
 
-// localStorage.setItem("Activities" JSON.stringify(apptsArr));
-// renderMsg();
+    // //Save data in the local storage
 
-
-// var saveDescription = function () {
-//     localStorage.setItem("activities", JSON.stringify(savedDescription));
+//     localStorage.setItem("savedActivities", JSON.stringify(savedActivities));
+//     renderMessage();
 // };
 
+// var saveDescription() {
+    
+// });
+// }
 
-// //Load saved activities from local storage
-// loadSavedActivities();
-//}
+$(".saveBtn").on("click", saveButton);
+
+localStorage.setItem("savedActivity", JSON.stringify(savedActivity));
+renderMessage();
+
+};
+
+function renderActivity() {
+
+    var lastActivity= JSON.parse(localStorage.getItem("savedActivities"));
+    if (lastActivity !== null) {
+    localStorage.setItem("#activities", JSON.stringify(savedDescription));
+  }
+}
+//Load saved activities from local storage
+
+
 
 
 // //Click timeblock to enter an event
@@ -94,3 +113,4 @@ function changeColor() {
 
 
 changeColor();
+
