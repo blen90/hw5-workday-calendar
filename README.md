@@ -34,4 +34,4 @@ Before you begin, ensure you have met the following requirements:
 
 ## Screenshot of the Password Generator
 
-![Work Day Scheduler](./assets/images/work-day.jpg)
+![Work Day](./assets/images/work-day.jpg)
