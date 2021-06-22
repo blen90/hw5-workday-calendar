@@ -33,5 +33,4 @@ Before you begin, ensure you have met the following requirements:
 * You have installed the lastest Google Chrome browser.
 
 ## Screenshot of the Password Generator
-
 ![Work Day](./assets/images/work.jpg)
