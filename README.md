@@ -6,7 +6,7 @@ https://blen90.github.io/hw5-workday-calendar/
 
 ## My task
 
-My task for this homework was to work on a Work Dary Scheduler. An HTML and a CSS file was provided to me and I needed to work on the JavaScript file by using jQuery, Bootstrap and Moment JS. 
+My task for this homework was to work on a Work Day Scheduler. An HTML and a CSS file was provided to me and I needed to work on the JavaScript file by using jQuery, Bootstrap and Moment JS. 
 
 The criteria to meet for this homework was the following:
 ```
@@ -32,5 +32,5 @@ Before you begin, ensure you have met the following requirements:
 * You are using a Windows or Mac OS machine. OS version 10 or above.
 * You have installed the lastest Google Chrome browser.
 
-## Screenshot of the Password Generator
+## Screenshot of Work Day Schedule
 ![Work Day](./assets/images/work.jpg)
