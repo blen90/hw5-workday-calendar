@@ -62,9 +62,9 @@ $(".saveBtn").on("click", function (e) {
     e.preventDefault();
 
     var value = $(this).siblings(".description").val();
-console.log(value, "VALUE");
+console.log(value, "value");
     var time = $(this).parent().attr("id");
-    console.log(time, "TIME");
+    console.log(time, "time");
     localStorage.setItem(time, value);   
 })
 

@@ -2,7 +2,7 @@
 
 ## Link to my deployed repository
 
-
+https://blen90.github.io/hw5-workday-calendar/
 
 ## My task
 
@@ -34,4 +34,4 @@ Before you begin, ensure you have met the following requirements:
 
 ## Screenshot of the Password Generator
 
-![Work Dary Scheduler]()
+![Work Dary Scheduler](./assets/images/work-day-planner.jpg)
