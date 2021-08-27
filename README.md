@@ -1,8 +1,8 @@
-# hw5-workday-calendar
+# Workday Calendar
 
 ## Link to my deployed repository
 
-https://blen90.github.io/hw5-workday-calendar/
+https://blen90.github.io/workday-calendar/
 
 ## My task
 
