@@ -1,5 +1,65 @@
 # Workday Calendar
 
+[![GitHub license](https://img.shields.io/badge/License-MIT-blue.svg)](https://blen90.github.io/workday-calendar/)
+
+# Description
+
+This app allows the user to have a WorkDay Calendar. The user can add different appointments, meetings that are stored in local storage. 
+
+
+## Deployed App link 
+
+https://blen90.github.io/workday-calendar/
+
+## Screenshots of the app
+
+![Work Day](./assets/images/work.jpg)
+
+# Table of Contents
+
+* [Installation](#installation)
+    
+* [Usage](#usage)
+
+* [Technology](#technology)
+
+* [License](#license)
+
+* [Contributors](#contributors)
+
+* [Questions](#questions)
+
+# Installation
+
+
+
+# Usage
+
+
+
+# Technology
+
+* HTML
+* JavaScript
+* jQuery
+* CSS
+* MomentJs
+
+
+# License 
+
+This project is governed by: MIT License
+
+# Contributors
+
+Blenda Orellana
+
+# Questions
+
+If you have any questions about the repo or the app please feel free to contact me
+ * Email: blen.or90@gmail.com
+ * Github: https://github.com/blen90
+
 ## Link to my deployed repository
 
 https://blen90.github.io/workday-calendar/
@@ -33,4 +93,4 @@ Before you begin, ensure you have met the following requirements:
 * You have installed the lastest Google Chrome browser.
 
 ## Screenshot of Work Day Schedule
-![Work Day](./assets/images/work.jpg)
+
